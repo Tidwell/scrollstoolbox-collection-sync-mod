@@ -27,8 +27,6 @@ namespace DeckSync
 
 		private Dictionary<long, Card> allCardsDict = null;
 		private Type deckBuilderType = typeof(DeckBuilder2);
-		private string username = "";
-		private string ingamename = "";
 
         public override void AfterInvoke(InvocationInfo info, ref object returnValue)
         {
@@ -59,19 +57,7 @@ namespace DeckSync
 					this.loadFromWeb(json);
                 }
             }
-
-			if (info.targetMethod.Equals("login"))
-			{
-				this.username = (string)typeof(Login).GetField ("username", BindingFlags.Instance | BindingFlags.NonPublic).GetValue(info.target);
-
-			}
-
-			if (info.targetMethod.Equals("profileinfomessage"))
-			{
-				this.ingamename = (string)typeof(ProfileInfo).GetField ("name", BindingFlags.Instance | BindingFlags.NonPublic).GetValue(info.target);
-
-			}
-        }
+		}
 
         public override bool BeforeInvoke(InvocationInfo info, out object returnValue)
         {
@@ -84,9 +70,7 @@ namespace DeckSync
 			try
 			{
 				return new MethodDefinition[] {
-						scrollsTypes["DeckBuilder2"].Methods.GetMethod("OnGUI")[0], // to draw gui buttons on the deckbuilder screen
-						scrollsTypes["Login"].Methods.GetMethod("login")[0], //this may seem scary, but i swear im just getting the username
-						scrollsTypes["ProfileInfoMessage"].Methods.GetMethod("profileinfomessage")[0]
+						scrollsTypes["DeckBuilder2"].Methods.GetMethod("OnGUI")[0] // to draw gui buttons on the deckbuilder screen
 				};
 			}
 			catch
@@ -119,7 +103,7 @@ namespace DeckSync
 				App.Popups.ShowOk(null, "fail", "Import failed", "That deck does not exist, or is deleted.", "Ok");
 			};
 			wc.TimeOut = 5000;
-			wc.DownloadStringAsync(new Uri("http://localhost:9000/collection/update?ingamename="+this.ingamename+"&inGameName="+this.username+"&data=" + collectionData));
+			wc.DownloadStringAsync(new Uri("http://localhost:9000/collection/update?inGameName="+App.MyProfile.ProfileInfo.name+"&data=" + collectionData));
         }
 	
 	}

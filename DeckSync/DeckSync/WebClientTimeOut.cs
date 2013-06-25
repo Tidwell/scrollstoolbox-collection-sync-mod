@@ -4,7 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 
-namespace DeckSync
+namespace CollectionSync
 {
 	public class WebClientTimeOut : WebClient
 	{

@@ -13,9 +13,9 @@ using System.Net;
 using JsonFx.Json;
 using UnityEngine;
 
-namespace DeckSync
+namespace CollectionSync
 {
-    public class DeckSync : BaseMod
+    public class CollectionSync : BaseMod
     {
 
         private DeckBuilder2 deckBuilder = null;

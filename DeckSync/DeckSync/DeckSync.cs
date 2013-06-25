@@ -97,14 +97,6 @@ namespace CollectionSync
 		private void loadFromWeb(String collectionData)
         {
 
-//			WebClientTimeOut wc = new WebClientTimeOut();
-//			wc.DownloadStringCompleted += (sender, e) =>
-//			{
-//				App.Popups.ShowOk(null, "fail", "Import failed", "That deck does not exist, or is deleted.", "Ok");
-//			};
-//			wc.TimeOut = 5000;
-//			wc.DownloadStringAsync(new Uri("http://localhost:9000/collection/update?inGameName="+App.MyProfile.ProfileInfo.name+"&data=" + collectionData));
-
 			WebClientTimeOut wc = new WebClientTimeOut();
 			wc.DownloadStringCompleted += (sender, e) =>
 			{
@@ -122,7 +114,7 @@ namespace CollectionSync
 				App.Popups.ShowOk(null, "fail", hdr, msg.msg, "Ok");
 			};
 			wc.TimeOut = 5000;
-			wc.DownloadStringAsync(new Uri("http://localhost:9000/collection/update?inGameName="+App.MyProfile.ProfileInfo.name+"&data=" + collectionData));
+			wc.DownloadStringAsync(new Uri("http://www.scrollstoolbox.com/collection/update?inGameName="+App.MyProfile.ProfileInfo.name+"&data=" + collectionData));
         }
 	
 	}

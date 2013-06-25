@@ -51,7 +51,7 @@
       <HintPath>..\..\..\ChatCommands\ChatCommands\ChatCommands\bin\Release\ScrollsModLoader.Interfaces.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine">
-      <HintPath>bin\Debug\UnityEngine.dll</HintPath>
+      <HintPath>bin\Release\UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="Mono.CSharp" />
   </ItemGroup>

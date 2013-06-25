@@ -114,7 +114,8 @@ namespace CollectionSync
 				App.Popups.ShowOk(null, "fail", hdr, msg.msg, "Ok");
 			};
 			wc.TimeOut = 5000;
-			wc.DownloadStringAsync(new Uri("http://www.scrollstoolbox.com/collection/update?inGameName="+App.MyProfile.ProfileInfo.name+"&data=" + collectionData));
+			//wc.DownloadStringAsync(new Uri("http://localhost:9000/collection/update?inGameName="+App.MyProfile.ProfileInfo.name+"&data=" + collectionData));
+			wc.DownloadStringAsync(new Uri("http://www.scrollstoolbox.com:9000/collection/update?inGameName="+App.MyProfile.ProfileInfo.name+"&data=" + collectionData));
         }
 	
 	}

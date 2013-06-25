@@ -9,8 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DeckSync</RootNamespace>
     <AssemblyName>DeckSync.mod</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <ProductVersion>12.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,28 +33,27 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\..\ScrollsModLoader\Assembly-CSharp.dll</HintPath>
+      <HintPath>bin\Release\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="JsonFx">
-      <HintPath>..\..\..\..\..\AppData\Local\Mojang\Scrolls\game\Scrolls_Data\Managed\JsonFx.dll</HintPath>
+      <HintPath>bin\Release\JsonFx.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Cecil">
-      <HintPath>..\..\..\PlayerInfo\PlayerInfo\PlayerInfo\bin\Release\Mono.Cecil.dll</HintPath>
-    </Reference>
-    <Reference Include="ScrollsModLoader.Interfaces, Version=1.0.4915.42107, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Assemblies\ScrollsModLoader.Interfaces.dll</HintPath>
+      <HintPath>bin\Release\Mono.Cecil.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="UnityEngine">
-      <HintPath>..\..\..\..\..\AppData\Local\Mojang\Scrolls\game\Scrolls_Data\Managed\UnityEngine.dll</HintPath>
+    <Reference Include="ScrollsModLoader.Interfaces">
+      <HintPath>..\..\..\ChatCommands\ChatCommands\ChatCommands\bin\Release\ScrollsModLoader.Interfaces.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>bin\Debug\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.CSharp" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApiDeckMessage.cs" />
@@ -67,7 +68,7 @@
     <PostBuildEvent>copy $(TargetDir)$(TargetFileName) C:\Users\Gamepc\AppData\Local\Mojang\Scrolls\game\Scrolls_Data\Managed\ModLoader\mods\DeckSync\$(TargetFileName)
 del C:\Users\Gamepc\AppData\Local\Mojang\Scrolls\game\Scrolls_Data\Managed\ModLoader\mods.ini</PostBuildEvent>
   </PropertyGroup>
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>

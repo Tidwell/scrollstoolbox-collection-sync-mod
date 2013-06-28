@@ -39,9 +39,9 @@ namespace CollectionSync
 				}
 
 				GUI.skin = buttonSkin;
-                GUIPositioner positioner3 = App.LobbyMenu.getSubMenuPositioner(1f, 5);
+                GUIPositioner positioner4 = App.LobbyMenu.getSubMenuPositioner(1f, 6);
                 GUI.skin = buttonSkin;
-                if (LobbyMenu.drawButton(positioner3.getButtonRect(3f), "Sync Collection"))
+                if (LobbyMenu.drawButton(positioner4.getButtonRect(4f), "Sync Collection"))
                 {
 					FieldInfo initedInfo = deckBuilderType.GetField("inited", BindingFlags.NonPublic | BindingFlags.Instance);
 

@@ -1,0 +1,25 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" ActiveRuntime="Mono 3.0.12" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="CollectionSync/CollectionSync.cs">
+    <Files>
+      <File FileName="CollectionSync/CollectionSync.cs" Line="1" Column="12" />
+      <File FileName="CollectionSync/Properties/AssemblyInfo.cs" Line="12" Column="43" />
+      <File FileName="CollectionSync/ApiDeckMessage.cs" Line="1" Column="1" />
+      <File FileName="CollectionSync/WebClientTimeOut.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="CollectionSync" expanded="True">
+            <Node name="Properties" expanded="True" />
+            <Node name="CollectionSync.cs" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

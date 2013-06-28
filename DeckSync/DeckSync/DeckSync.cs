@@ -86,7 +86,7 @@ namespace CollectionSync
 
         public static int GetVersion()
         {
-            return 1;
+            return 2;
         }
 
         public void PopupCancel(string popupType)

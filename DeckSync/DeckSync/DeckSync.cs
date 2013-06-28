@@ -98,7 +98,7 @@ namespace CollectionSync
         {
 
 			WebClientTimeOut wc = new WebClientTimeOut();
-			wc.DownloadStringCompleted += (sender, e) =>
+			wc.UploadStringCompleted += (sender, e) =>
 			{
 
 				JsonReader reader = new JsonReader();
@@ -114,8 +114,8 @@ namespace CollectionSync
 				App.Popups.ShowOk(null, "fail", hdr, msg.msg, "Ok");
 			};
 			wc.TimeOut = 5000;
-			//wc.DownloadStringAsync(new Uri("http://localhost:9000/collection/update?inGameName="+App.MyProfile.ProfileInfo.name+"&data=" + collectionData));
-			wc.DownloadStringAsync(new Uri("http://www.scrollstoolbox.com:9000/collection/update?inGameName="+App.MyProfile.ProfileInfo.name+"&data=" + collectionData));
+			//wc.UploadStringAsync(new Uri("http://localhost:9000/collection/update?inGameName="+App.MyProfile.ProfileInfo.name+"&data=" + collectionData), "POST");
+			wc.UploadStringAsync(new Uri("http://www.scrollstoolbox.com:9000/collection/update?inGameName="+App.MyProfile.ProfileInfo.name+"&data=" + collectionData), "POST");
         }
 	
 	}

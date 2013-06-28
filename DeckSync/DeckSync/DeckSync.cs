@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Net;
+using System.Web;
 using JsonFx.Json;
 using UnityEngine;
 
@@ -96,7 +97,7 @@ namespace CollectionSync
 
 		private void loadFromWeb(String collectionData)
         {
-
+			
 			WebClientTimeOut wc = new WebClientTimeOut();
 			wc.UploadStringCompleted += (sender, e) =>
 			{
@@ -114,8 +115,8 @@ namespace CollectionSync
 				App.Popups.ShowOk(null, "fail", hdr, msg.msg, "Ok");
 			};
 			wc.TimeOut = 5000;
-			//wc.UploadStringAsync(new Uri("http://localhost:9000/collection/update?inGameName="+App.MyProfile.ProfileInfo.name+"&data=" + collectionData), "POST");
-			wc.UploadStringAsync(new Uri("http://www.scrollstoolbox.com:9000/collection/update?inGameName="+App.MyProfile.ProfileInfo.name+"&data=" + collectionData), "POST");
+			//wc.UploadStringAsync(new Uri("http://localhost:9000/collection/update?inGameName="+App.MyProfile.ProfileInfo.name), "POST", collectionData);
+			wc.UploadStringAsync(new Uri("http://www.scrollstoolbox.com:9000/collection/update?inGameName="+App.MyProfile.ProfileInfo.name), "POST", collectionData);
         }
 	
 	}

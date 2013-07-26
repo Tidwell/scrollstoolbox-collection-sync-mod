@@ -60,10 +60,9 @@ namespace CollectionSync
             }
 		}
 
-        public override bool BeforeInvoke(InvocationInfo info, out object returnValue)
+        public override void BeforeInvoke(InvocationInfo info)
         {
-            returnValue = null;
-            return false;
+            return;
         }
 
         public static MethodDefinition[] GetHooks(TypeDefinitionCollection scrollsTypes, int version)
@@ -87,7 +86,7 @@ namespace CollectionSync
 
         public static int GetVersion()
         {
-            return 2;
+            return 3;
         }
 
         public void PopupCancel(string popupType)

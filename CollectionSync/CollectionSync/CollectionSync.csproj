@@ -46,13 +46,13 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="ScrollsModLoader.Interfaces">
-      <HintPath>..\..\..\ChatCommands\ChatCommands\ChatCommands\bin\Release\ScrollsModLoader.Interfaces.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine">
       <HintPath>bin\_release\UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="Mono.CSharp" />
+    <Reference Include="ScrollsModLoader.Interfaces">
+      <HintPath>bin\_release\ScrollsModLoader.Interfaces.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApiDeckMessage.cs" />

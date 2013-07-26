@@ -2,8 +2,8 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" ActiveRuntime="Mono 3.0.12" />
   <MonoDevelop.Ide.Workbench ActiveDocument="CollectionSync/CollectionSync.cs">
     <Files>
-      <File FileName="CollectionSync/CollectionSync.cs" Line="1" Column="12" />
-      <File FileName="CollectionSync/Properties/AssemblyInfo.cs" Line="12" Column="43" />
+      <File FileName="CollectionSync/CollectionSync.cs" Line="19" Column="18" />
+      <File FileName="CollectionSync/Properties/AssemblyInfo.cs" Line="1" Column="1" />
       <File FileName="CollectionSync/ApiDeckMessage.cs" Line="1" Column="1" />
       <File FileName="CollectionSync/WebClientTimeOut.cs" Line="1" Column="1" />
     </Files>
@@ -11,8 +11,10 @@
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="CollectionSync" expanded="True">
+            <Node name="References" expanded="True">
+              <Node name="/www/ChatCommands/ChatCommands/ChatCommands/bin/Release/ScrollsModLoader.Interfaces.dll" selected="True" />
+            </Node>
             <Node name="Properties" expanded="True" />
-            <Node name="CollectionSync.cs" selected="True" />
           </Node>
         </State>
       </Pad>

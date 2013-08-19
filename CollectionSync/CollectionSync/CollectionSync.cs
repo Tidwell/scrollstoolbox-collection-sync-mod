@@ -31,7 +31,7 @@ namespace CollectionSync
 
         public override void AfterInvoke(InvocationInfo info, ref object returnValue)
         {
-            if (info.targetMethod.Equals("OnGUI"))
+			if (info.targetMethod.Equals("OnGUI") && info.target.GetType().ToString() == "DeckBuilder2")
             {
 				if (deckBuilder == null)
 				{
@@ -40,8 +40,10 @@ namespace CollectionSync
 
 				GUI.skin = buttonSkin;
                 GUIPositioner positioner4 = App.LobbyMenu.getSubMenuPositioner(1f, 6);
-                GUI.skin = buttonSkin;
-                if (LobbyMenu.drawButton(positioner4.getButtonRect(4f), "Sync Collection"))
+
+				var rect = positioner4.getButtonRect (4f);
+				rect.x += 60;
+                if (LobbyMenu.drawButton(rect, "Sync Collection"))
                 {
 					FieldInfo initedInfo = deckBuilderType.GetField("inited", BindingFlags.NonPublic | BindingFlags.Instance);
 
@@ -86,7 +88,7 @@ namespace CollectionSync
 
         public static int GetVersion()
         {
-            return 3;
+            return 4;
         }
 
         public void PopupCancel(string popupType)
